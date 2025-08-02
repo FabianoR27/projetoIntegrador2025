@@ -16,4 +16,7 @@ $conecta = new mysqli($nome_servidor, $nome_usuario, $senha, $nome_banco);
 if ($conecta->connect_error) {
     die("Conexão falhou: " . $conecta->connect_error); // Encerrar o script se a conexão falhar
 }
+
+// Define o charset corretamente para evitar caracteres corrompidos
+$conecta->set_charset("utf8mb4");
 ?>

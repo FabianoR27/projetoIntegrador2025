@@ -1,23 +1,9 @@
--- Algumas coisas a serem pontuadas:
-
--- Nome do servidor: localhost
--- nome do usuário: root
--- senha: '' (não tem senha)
--- nome do banco de dados: portalfatecon
-
-
--- Criando o Banco de dados somente se não existir ainda
-CREATE DATABASE IF NOT EXISTS portalfatecon
-    DEFAULT CHARACTER SET = 'utf8mb4';
-USE portalfatecon;
-
-
 -- Criando a tabela com lista de Animes
 CREATE TABLE IF NOT EXISTS listaAnimes (
     id INT PRIMARY KEY AUTO_INCREMENT,
     tituloAnime VARCHAR (60),
     nomeImagemCardAnime VARCHAR (40)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 
 -- Criando a tabela com o conteúdo dos animes
@@ -33,7 +19,7 @@ CREATE TABLE IF NOT EXISTS conteudoAnimes (
     altTextImg varchar (255),
     urlVideo varchar (255),
     urlStream varchar (255)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 
 -- inserindo os devidos dados na tabela com lista de Animes
@@ -53,7 +39,7 @@ VALUES
 
 
 -- inserindo os devidos dados na tabela com o conteúdo dos Animes
-INSERT INTO conteudoanimes
+INSERT INTO conteudoAnimes
     (tituloAnime, 
     paragrafo1, 
     paragrafo2, 
@@ -158,11 +144,11 @@ CREATE TABLE IF NOT EXISTS artigoAnimesESeries (
     imagemArtigo VARCHAR(40),
     altTextImagem TEXT,
     figCaption VARCHAR (100)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 
 -- inserindo dados na tabela de Artigos
-INSERT into artigoanimeseseries
+INSERT into artigoAnimesESeries
     (tituloArtigo, autorArtigo, paragrafo1, paragrafo2, paragrafo3, paragrafo4, imagemArtigo, altTextImagem, figCaption)
 VALUES
     ('O que são animes? Uma introdução ao Universo das Animações Japonesas',
@@ -194,10 +180,10 @@ CREATE TABLE IF NOT EXISTS complementoAnimesESeries (
     nomeFonte VARCHAR(20),
     imgComp VARCHAR (40),
     altTextImg VARCHAR (255)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 
-INSERT INTO complementoanimeseseries
+INSERT INTO complementoAnimesESeries
     (`tituloComp`, `textoComp`, `urlFonte`,`nomeFonte`, `imgComp`, `altTextImg`)
 VALUES
     ('Curiosidade: Você sabe qual é o anime mais longo da história?', 'Sei que você já achou que One Piece era o anime mais longo de todos, ou até mesmo Pokémon e Doraemon, por já terem ultrapassado a marca de mil episódios transmitidos, mas aqui o buraco é bem mais fundo. Provavelmente você não conhece, mas <strong>Sazae-san</strong> é transmitido na televisão japonesa há 54 anos e é o detentor do topo desta lista com mais 7.330 episódios.', 'https://br.ign.com/anime/113303/news/mais-de-7500-episodios-em-54-anos-esse-anime-desbanca-one-piece-em-tamanho','IGN', 'anime_character_luffy', 'Retrato do cartaz de procurado de Monkey D. Luffy, protagonista do anime One Piece, sorrindo amplamente com seu chapéu de palha característico. Abaixo da imagem, está escrito: WANTED – Dead or Alive – Monkey D. Luffy.'),
@@ -214,10 +200,10 @@ CREATE TABLE IF NOT EXISTS listaSeries (
     paragrafo3 TEXT,
     urlStream VARCHAR (255),
     imgBannerSerie VARCHAR (50)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- inserindo dados na tabela de Séries:
-INSERT INTO listaseries
+INSERT INTO listaSeries
     (tituloSerie, 
     paragrafo1, 
     paragrafo2, 
@@ -267,7 +253,7 @@ CREATE TABLE IF NOT EXISTS carrossel (
     ordem INT DEFAULT 0,
     ativo BOOLEAN DEFAULT TRUE,
     altImg VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Inserindo dados para o carrossel
 INSERT INTO carrossel (titulo, descricao, imagem, texto_botao, link_botao, ordem, altImg) VALUES
@@ -286,7 +272,7 @@ CREATE TABLE IF NOT EXISTS secoes_expositores (
     link_botao VARCHAR(255) NOT NULL,
     posicao ENUM('esquerda', 'direita') DEFAULT 'direita',
     ativo BOOLEAN DEFAULT TRUE
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Inserindo seção de expositores
 INSERT INTO secoes_expositores (titulo, conteudo, imagem, texto_botao, link_botao, posicao) VALUES
@@ -310,7 +296,7 @@ CREATE TABLE IF NOT EXISTS artigos (
     data_publicacao DATETIME DEFAULT CURRENT_TIMESTAMP,
     destaque BOOLEAN DEFAULT FALSE,
     link_botao VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Inserindo artigos/destaques
 INSERT INTO artigos (titulo, subtitulo, conteudo, autor, categoria, imagem, destaque, link_botao) VALUES
@@ -329,7 +315,7 @@ CREATE TABLE IF NOT EXISTS cards_navegacao (
     link VARCHAR(255) NOT NULL,
     ordem INT DEFAULT 0,
     ativo BOOLEAN DEFAULT TRUE
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Inserindo cards de navegação
 INSERT INTO cards_navegacao (titulo, imagem, link, ordem) VALUES
@@ -352,7 +338,7 @@ CREATE TABLE IF NOT EXISTS informacoes_evento (
     descricao TEXT NOT NULL,
     texto_botao VARCHAR(50) NOT NULL,
     link_botao VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Inserindo informações do evento
 INSERT INTO informacoes_evento (titulo, descricao, texto_botao, link_botao) VALUES
@@ -365,7 +351,7 @@ CREATE TABLE IF NOT EXISTS conteudo_especial (
     conteudo TEXT NOT NULL,
     imagem VARCHAR(255) NOT NULL,
     ativo BOOLEAN DEFAULT TRUE
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Inserindo seção de cosplay
 INSERT INTO conteudo_especial (titulo, conteudo, imagem) VALUES
@@ -380,7 +366,7 @@ CREATE TABLE IF NOT EXISTS pagina_inscricao (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
     descricao TEXT NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 INSERT INTO pagina_inscricao (titulo, descricao)
 VALUES (
@@ -393,7 +379,7 @@ CREATE TABLE IF NOT EXISTS tipos_inscricao (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     valor VARCHAR(50) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 INSERT INTO tipos_inscricao (nome, valor) VALUES
 ('Cosplay', 'cosplay'),
@@ -408,7 +394,7 @@ CREATE TABLE IF NOT EXISTS inscricoes (
     tipo_inscricao VARCHAR(50) NOT NULL,
     comentarios TEXT,
     data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- script pagina contatos
 CREATE TABLE IF NOT EXISTS contatos_site (
@@ -420,7 +406,7 @@ CREATE TABLE IF NOT EXISTS contatos_site (
     facebook_link VARCHAR(255),
     endereco TEXT,
     mapa_embed TEXT
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 INSERT INTO contatos_site (
     whatsapp,
@@ -448,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `expositores` (
   `imagem` varchar(50) NOT NULL,
   `altImagem` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 
 INSERT INTO `expositores` (`id`, `nome`, `descricao`, `imagem`, `altImagem`) VALUES
@@ -505,7 +491,7 @@ CREATE TABLE IF NOT EXISTS `integrantes` (
   `imagem` varchar(50) NOT NULL,
   `altImagem` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 INSERT INTO `integrantes` (`id`, `nome`, `apelido`, `descricao`, `ra`, `imagem`, `altImagem`) VALUES
 	(1, 'Fabiano Ramos', 'Coder Otaku', '"Opa, Fabiano aqui! Tenho 29 anos, sou formado em Contabilidade, Administração e estudo atualmente Sistemas para Internet, na FATEC-SR. Amo música boa e sou muito fã de animes e séries. “One Piece” é meu anime favorito e “Supernatural” a minha série favorita. Também faço páginas HTML, algumas são legais. Quem sabe eu me torno um dev Front-End um dia... "', '2650832413012', 'fabiano.webp', 'Homem jovem de barba e cabelo curto e ondulado, vestindo camisa xadrez aberta sobre camiseta preta. Ele está ao ar livre à noite'),
@@ -523,7 +509,7 @@ CREATE TABLE IF NOT EXISTS `normas` (
   `imagem` varchar(50) NOT NULL,
   `altImagem` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 INSERT INTO `normas` (`id`, `titulo`, `descricao`, `imagem`, `altImagem`) VALUES
 	(1, 'FUNÇÃO DO SITE', 'O portal FateconHQs foi desenvolvido para fornecer informações completas sobre o evento, incluindo programação, convidados, notícias e atividades. Nosso objetivo é oferecer uma experiência digital interativa e informativa, promovendo a cultura dos quadrinhos e da tecnologia.', 'funcao-site.webp', 'Um boneco miniatura do homem-aranha encima de uma mesa'),
@@ -539,7 +525,7 @@ CREATE TABLE IF NOT EXISTS `paginas` (
   `pagina` varchar(50) NOT NULL,
   `link` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 INSERT INTO `paginas` (`id`, `id_integrante`, `pagina`, `link`) VALUES
 	(1, 1, 'Animes', 'entretenimento.php?page=Animes'),
@@ -556,17 +542,17 @@ INSERT INTO `paginas` (`id`, `id_integrante`, `pagina`, `link`) VALUES
 	(12, 6, 'Contatos', 'contatos.php?page=Contatos');
 
 -- Paginas HQs e mangás--
-CREATE TABLE IF NOT EXISTS ArtigosHqsEMangas (
+CREATE TABLE IF NOT EXISTS artigoshqsemangas (
     id INT PRIMARY KEY AUTO_INCREMENT,
     Categoria VARCHAR(10) NOT NULL,
     Titulo VARCHAR(30) NOT NULL,
     Paragrafo1 TEXT NOT NULL,
-    Paragrafo2 TEXT NOT NULL,   
+    Paragrafo2 TEXT NOT NULL,
     Paragrafo3 TEXT NOT NULL
 
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
-INSERT INTO ArtigosHqsEMangas (
+INSERT INTO artigoshqsemangas (
     Categoria,
     Titulo,
     Paragrafo1,
@@ -587,7 +573,7 @@ INSERT INTO ArtigosHqsEMangas (
     'Nos anos 1990, o mangá ganhou popularidade internacional, impulsionado por traduções e adaptações de animes, que são séries de animação baseadas em mangás. Hoje, o mangá é um fenômeno global, com fãs em todo o mundo e uma ampla variedade de estilos e temas. Seu impacto é evidente não só na literatura e no entretenimento, mas também na moda e na arte, consolidando o mangá como uma forma única e influente de expressão cultural japonesa.'
 );
 
-CREATE TABLE IF NOT EXISTS ImagensArtigosHqsEMangas (
+CREATE TABLE IF NOT EXISTS imagensartigoshqsemangas (
     id INT PRIMARY KEY AUTO_INCREMENT,
     Categoria VARCHAR(10) NOT NULL,
     IdArtigo INT NOT NULL,
@@ -598,13 +584,13 @@ CREATE TABLE IF NOT EXISTS ImagensArtigosHqsEMangas (
     Imagem5 VARCHAR(50) NOT NULL,
     AltImagem1 VARCHAR(255) NOT NULL,
     AltImagem2 VARCHAR(255) NOT NULL,
-    AltImagem3 VARCHAR(255) NOT NULL,   
+    AltImagem3 VARCHAR(255) NOT NULL,
     AltImagem4 VARCHAR(255) NOT NULL,
     AltImagem5 VARCHAR(255) NOT NULL,
-    FOREIGN KEY (idArtigo) REFERENCES ArtigosHqsEMangas(id)
-);
+    FOREIGN KEY (idArtigo) REFERENCES artigoshqsemangas(id)
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
-INSERT INTO ImagensArtigosHqsEMangas (
+INSERT INTO imagensartigoshqsemangas (
     Categoria,
     IdArtigo,
     Imagem1,
@@ -646,7 +632,7 @@ INSERT INTO ImagensArtigosHqsEMangas (
     'LUFFY'
 );
 
-CREATE TABLE IF NOT EXISTS Hqsseries (
+CREATE TABLE IF NOT EXISTS hqsseries (
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(30) NOT NULL,
     NomeAutor VARCHAR(30) NOT NULL,
@@ -655,7 +641,7 @@ CREATE TABLE IF NOT EXISTS Hqsseries (
     AltImagem VARCHAR(255) NOT NULL,
     LegendaImagem VARCHAR(50) NOT NULL,
     linkWeb VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 INSERT INTO hqsseries (
     titulo,
@@ -703,7 +689,7 @@ INSERT INTO hqsseries (
 );
 
 
-CREATE TABLE IF NOT EXISTS MangasSeries (
+CREATE TABLE IF NOT EXISTS mangasseries (
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(100) NOT NULL,
     NomeAutor VARCHAR(30) NOT NULL,
@@ -712,10 +698,10 @@ CREATE TABLE IF NOT EXISTS MangasSeries (
     AltImagem VARCHAR(255) NOT NULL,
     LegendaImagem VARCHAR(50) NOT NULL,
     linkWeb VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 
-INSERT INTO MangasSeries (
+INSERT INTO mangasseries (
     titulo,
     NomeAutor,
     Paragrafo1,
@@ -760,16 +746,16 @@ INSERT INTO MangasSeries (
     'https://deathnote.fandom.com/pt/wiki/Death_Note_(s%C3%A9rie)'
 );
 
-CREATE TABLE IF NOT EXISTS HqsFilmes (
+CREATE TABLE IF NOT EXISTS hqsfilmes (
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(30) NOT NULL,
     Paragrafo1 TEXT NOT NULL,
     Imagem VARCHAR(50) NOT NULL,
     AltImagem VARCHAR(255) NOT NULL,
     LegendaImagem VARCHAR(50) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
-INSERT INTO HqsFilmes (
+INSERT INTO hqsfilmes (
     titulo,
     Paragrafo1,
     Imagem,
@@ -792,7 +778,7 @@ INSERT INTO HqsFilmes (
 (
     'V de Vingança',
     'V de Vingança é uma HQ escrita por Alan Moore e ilustrada por David Lloyd, que retrata uma Inglaterra distópica sob regime totalitário. A trama segue V, um vigilante mascarado que luta contra a opressão e busca inspirar a população à revolta. Com temas de liberdade, justiça e resistência, a obra é considerada uma crítica poderosa aos abusos de poder e à perda de direitos civis.',
-    'v_vingança.png',
+    'v_vinganca.png',
     'Capa da HQ “V de Vingança”, com o rosto sorridente do personagem V usando a icônica máscara de Guy Fawkes em destaque, e o título em vermelho no topo junto aos nomes dos autores Alan Moore e David Lloyd.',
     'HQ V De Vingança'
 ),
@@ -805,16 +791,16 @@ INSERT INTO HqsFilmes (
 );
 
 
-CREATE TABLE IF NOT EXISTS MangasFilmes (
+CREATE TABLE IF NOT EXISTS mangasfilmes (
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(30) NOT NULL,
     Paragrafo1 TEXT NOT NULL,
     Imagem VARCHAR(50) NOT NULL,
     AltImagem VARCHAR(255) NOT NULL,
     LegendaImagem VARCHAR(50) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
-INSERT INTO MangasFilmes (
+INSERT INTO mangasfilmes (
     titulo,
     Paragrafo1,
     Imagem,
@@ -849,15 +835,15 @@ INSERT INTO MangasFilmes (
     'Gunnm vol.09'
 );
 
-CREATE TABLE IF NOT EXISTS AutoresHQs (
+CREATE TABLE IF NOT EXISTS autoreshqs (
     id INT PRIMARY KEY AUTO_INCREMENT,
     NomeAutor VARCHAR(30) NOT NULL,
     Paragrafo TEXT NOT NULL,
     Imagem VARCHAR(50) NOT NULL,
     AltImagem VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
-INSERT INTO AutoresHQs (
+INSERT INTO autoreshqs (
     NomeAutor,
     Paragrafo,
     Imagem,
@@ -888,15 +874,15 @@ INSERT INTO AutoresHQs (
 );
 
 
-CREATE TABLE IF NOT EXISTS AutoresMangas (
+CREATE TABLE IF NOT EXISTS autoresmangas (
     id INT PRIMARY KEY AUTO_INCREMENT,
     NomeAutor VARCHAR(30) NOT NULL,
     Paragrafo TEXT NOT NULL,
     Imagem VARCHAR(50) NOT NULL,
     AltImagem VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
-INSERT INTO AutoresMangas (
+INSERT INTO autoresmangas (
     NomeAutor,
     Paragrafo,
     Imagem,
@@ -937,7 +923,7 @@ CREATE TABLE IF NOT EXISTS artigoatracoes(
     paragrafo3 TEXT NOT NULL,
     imagem VARCHAR(50),
     alttext TEXT
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Inserindo dados na tabela de atrações
 INSERT INTO artigoatracoes(
@@ -953,7 +939,7 @@ CREATE TABLE IF NOT EXISTS secaoatracoes (
     textoatracao TEXT NOT NULL,
     imagematracao VARCHAR(50) NOT NULL,
     alttextimagem VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- dados da seção de atrações
 INSERT INTO secaoatracoes (
@@ -994,7 +980,7 @@ CREATE TABLE IF NOT EXISTS autoresparticipantes (
     nomeAutor VARCHAR(50) NOT NULL,
     fotoAutor VARCHAR(50) NOT NULL,
     altTextImagem VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Dados da seção de autores participantes
 INSERT INTO autoresparticipantes (
@@ -1058,7 +1044,7 @@ CREATE TABLE IF NOT EXISTS galeriaevento (
     id INT PRIMARY KEY AUTO_INCREMENT,
     imagem VARCHAR(50) NOT NULL,
     altText VARCHAR(255) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- dados da galeria de imagens
 INSERT into galeriaevento (
@@ -1118,7 +1104,7 @@ CREATE TABLE IF NOT EXISTS artigogamereview (
     notaGame TINYINT NOT NULL,
     video VARCHAR(255) NOT NULL,
     legendaVideo VARCHAR(100) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Inserindo dados no artigo de games
 INSERT INTO artigogamereview (
@@ -1149,7 +1135,7 @@ CREATE TABLE IF NOT EXISTS personagensdasemana (
     nomeProtagonista VARCHAR(50),
     personagemImg VARCHAR(50),
     nomePersonagem VARCHAR(50)
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Inserindo dados na tabela de personagens da semana
 INSERT INTO personagensdasemana (
@@ -1201,7 +1187,7 @@ CREATE TABLE IF NOT EXISTS jogostabuleiro (
     nomeJogo VARCHAR(100) NOT NULL,
     descricao TEXT NOT NULL,
     imagem VARCHAR(50) NOT NULL
-);
+) DEFAULT character set utf8mb4 collate utf8mb4_unicode_ci;
 
 -- Dados dos jogos de tabuleiro
 INSERT INTO jogostabuleiro (

@@ -15,7 +15,7 @@ if ($page == "HQs") {
     $codename = "mangas";
 }
 
-$conteudoArtigo = $conecta->query("SELECT * FROM ArtigosHqsEMangas WHERE id = {$id}");
+$conteudoArtigo = $conecta->query("SELECT * FROM artigoshqsemangas WHERE id = {$id}");
 $conteudoImagens = $conecta->query("SELECT * FROM imagensartigoshqsemangas WHERE id = {$id}");
 $linhaConteudo = $conteudoArtigo->fetch_assoc();
 $imagensArtigo = $conteudoImagens->fetch_assoc();
@@ -74,7 +74,7 @@ $imagensArtigo = $conteudoImagens->fetch_assoc();
             <div class="row row-cols-lg-2 text-light g-0 pt-4">
 
                 <?php
-                $consultaObrasSeries = $conecta->query("SELECT * FROM {$codename}Series"); // consulta a tabela da lista de animes
+                $consultaObrasSeries = $conecta->query("SELECT * FROM {$codename}series"); // consulta a tabela da lista de animes
                 while ($obrasSeries = $consultaObrasSeries->fetch_assoc()): ?>
                     <!-- aqui começa o conteúdo dinâmico -->
                     <div class="p-2">
@@ -110,7 +110,7 @@ $imagensArtigo = $conteudoImagens->fetch_assoc();
             <div class="row row-cols-md-2 row-cols-xl-4 pt-4 g-0">
 
                 <?php
-                $consultaObrasFilmes = $conecta->query("SELECT * FROM {$codename}Filmes");
+                $consultaObrasFilmes = $conecta->query("SELECT * FROM {$codename}filmes");
                 while ($obrasFilmes = $consultaObrasFilmes->fetch_assoc()): ?>
                     <!-- começo do artigo dimanico -->
                     <div class="p-2">
@@ -168,7 +168,7 @@ $imagensArtigo = $conteudoImagens->fetch_assoc();
         <div class="container my-0 my-md-5 p-md-0 text-center">
             <h3 class="h2 fw-bold">CONHEÇA TAMBÉM: 5 SÉRIES QUE TROUXERAM AS HQS PARA A TV</h3>
             <p class="lead">Heróis, Vilões e Muito Mais: veja aqui 5 Séries de TV que Vieram das Histórias em Quadrinhos</p>
-            <a class="btn btn-secondary btn-lg" href="series.php?page=Series">SAIBA MAIS</a>
+            <a class="btn btn-secondary btn-lg" href="entretenimento.php?page=Series">SAIBA MAIS</a>
         </div>
     </aside>
 </main>

@@ -95,7 +95,7 @@ $cosplay = mysqli_fetch_assoc(mysqli_query($conecta, "SELECT * FROM conteudo_esp
                 <div>
                     <p class="lead"><?= nl2br(htmlspecialchars($cosplay['conteudo'])) ?></p>
                     <img class="img-fluid my-5 rounded-3" src="src/assets/images/home/<?= $cosplay['imagem'] ?>.webp"
-                        alt="Participantes do evento vestidos com trajes de cosplay representando personagens de animes e quadrinhos" loading="lazy" style="max-width: 700px;">
+                        alt="Participantes do evento vestidos com trajes de cosplay representando personagens de animes e quadrinhos" loading="lazy">
                 </div>
             </div>
         </div>
