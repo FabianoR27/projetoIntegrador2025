@@ -1,49 +1,90 @@
-# Projeto Integrador 2025 (Versão Revitalizada)
+# 🌐 Projeto Integrador 2025 — Portal FATECon HQs
 
-Olá! Este é um projeto acadêmico desenvolvido com base na *FATECon HQs*, um evento geek anual realizado em São Roque - SP. A proposta era criar um portal dinâmico e acessível, utilizando **PHP e MySQL**, para oferecer uma experiência moderna e inclusiva aos visitantes.
+Este é um projeto acadêmico desenvolvido com base na *FATECon HQs*, um evento geek anual realizado em São Roque - SP. A proposta foi criar um portal dinâmico e acessível, utilizando **PHP e MySQL**, para oferecer uma experiência moderna e inclusiva aos visitantes.
 
-O projeto é uma continuação da versão desenvolvida em 2024 e recebeu diversas melhorias importantes nesta nova etapa, incluindo:
-
-* 💻 Desenvolvimento dinâmico em **PHP**, com integração de dados via **MySQL**
-* 📱 **Responsividade** para todos os tamanhos de tela
-* 🌙 **Modo escuro** persistente, utilizando `localStorage`
-* 📁 Formulários interativos e inserção de conteúdo via **AJAX**
-* ♿ **Acessibilidade aprimorada**, com suporte a leitores de tela
+> 🔗 Acesse o projeto online: [https://portalfatecon.infinityfree.me/](https://portalfatecon.infinityfree.me/)
 
 ---
 
-## Minha contribuição pessoal
+## 🛠 Tecnologias Utilizadas
 
-O projeto foi construído em equipe (6 integrantes no total), e sou muito grato por cada um que fez parte dessa jornada. Após a entrega oficial, decidi refinar o portal com base na minha visão de design e desenvolvimento, aplicando meus aprendizados e estilo pessoal de codificação.
-
-Essas foram as principais melhorias que implementei:
-
-* Redesign completo dos layouts, com nova paleta de cores e imagens otimizadas
-* Refatoração do código para torná-lo mais limpo, legível e escalável
-* Implementação de um modo escuro funcional e persistente
-* Ajustes de acessibilidade para tornar a navegação mais inclusiva
-
----
-
-## Aprendizados
-
-Ao longo desse processo, pude aprofundar meus conhecimentos em:
-
-* ✅ **PHP** e integração com banco de dados
-* ✅ **JavaScript**, incluindo manipulação de DOM, AJAX e armazenamento local
-* ✅ **Design de interfaces**, com foco em experiência do usuário (UX/UI)
-* ✅ **Boas práticas de codificação e acessibilidade web**
-
-Esse projeto representa a consolidação de muitos aprendizados que venho acumulando em minha jornada como aspirante a desenvolvedor Front-End. Sei que ainda há muito a evoluir, mas sigo determinado a aprender mais e buscar meu espaço no mercado de tecnologia.
+* **PHP**
+* **MySQL**
+* **HTML5**
+* **CSS3**
+* **JavaScript (DOM, LocalStorage, AJAX)**
+* **Bootstrap**
+* **Leitor de Tela (Acessibilidade)**
 
 ---
 
-## Acesse o projeto
+## 📌 Funcionalidades
 
-Se você quiser conferir o resultado, o projeto está disponível em:
+* Portal dinâmico com integração ao banco de dados
+* Layout responsivo para todos os dispositivos
+* Modo escuro persistente com `localStorage`
+* Inserção de conteúdo com AJAX
+* Navegação acessível para leitores de tela
+* Interface e código otimizados e refatorados
 
-🔗 **[https://portalfatecon.infinityfree.me/](https://portalfatecon.infinityfree.me/)**
+---
 
-Ficarei muito feliz com feedbacks, sugestões ou críticas construtivas. Cada comentário é uma oportunidade de crescer ainda mais.
+## ✨ Minha Contribuição Pessoal
 
-Obrigado por acompanhar meu trabalho! 🚀
+O projeto foi realizado em equipe, com 6 integrantes. Após a entrega oficial, decidi revisitar e melhorar o portal, aplicando minha visão de design e boas práticas de desenvolvimento.
+
+Melhorias realizadas:
+
+* Refatoração de todo o código
+* Redesign dos layouts e cores
+* Imagens otimizadas com alta qualidade
+* Implementação do modo escuro
+* Ajustes de acessibilidade e navegação
+
+---
+
+## 📚 Aprendizados
+
+Este projeto foi essencial para consolidar meu conhecimento em:
+
+* Programação em PHP com integração a banco de dados
+* JavaScript moderno e interatividade com o usuário
+* Design de interfaces responsivas e acessíveis
+* Boas práticas de codificação e estruturação de projetos
+
+---
+
+## ▶️ Como Rodar Localmente
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/FabianoR27/projetoIntegrador2025.git
+   ```
+
+2. Importe o banco de dados `portalfatecon.sql` para o MySQL (pelo phpMyAdmin ou terminal) (está localizado na pasta `/src/database/`)
+
+3. Inicie o servidor local com o XAMPP ou outro ambiente de sua escolha
+
+4. Acesse `http://localhost/projetoIntegrador2025/` no navegador
+
+---
+
+## 📸 Captura de Tela do Modo Escuro 😅
+
+> ![Demonstração do modo escuro](src/assets/images/gifPortal.gif)
+
+
+---
+
+## 🤝 Contribuições
+
+Críticas construtivas, sugestões e feedbacks são muito bem-vindos. Estou sempre buscando evoluir como desenvolvedor!
+
+---
+
+## 📂 Licença
+
+Este projeto é de uso acadêmico e não possui fins comerciais.
+
+---
