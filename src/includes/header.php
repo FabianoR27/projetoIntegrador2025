@@ -35,8 +35,8 @@ if ($paginaAtual == 'Atracoes') {
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Portal Fatecon - Seu destino para o mundo Geek" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://portalfatecon.com" /><!-- url fictícia, pode ser alterada em uma futura hospedagem do site -->
-    <meta property="og:image" content="https://portalfatecon.com/src/assets/images/mascoteFatecon.png" /><!-- url fictícia, pode ser alterada em uma futura hospedagem do site -->
+    <meta property="og:url" content="https://portalfatecon.infinityfree.me/" />
+    <meta property="og:image" content="https://portalfatecon.infinityfree.me/src/assets/images/mascoteFatecon.webp" /><!-- url fictícia, pode ser alterada em uma futura hospedagem do site -->
     <meta property="og:description" content="Um portal feito para falar sobre o evento FateconHQs, além de trazer notícias sobre o mundo geek" />
     <meta property="og:site_name" content="Portal Fatecon">
     <meta property="og:locale" content="pt_BR">
@@ -45,7 +45,7 @@ if ($paginaAtual == 'Atracoes') {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Portal Fatecon - Seu destino para o mundo Geek" />
     <meta name="twitter:description" content="Um portal feito para falar sobre o evento FateconHQs, além de trazer notícias sobre o mundo geek" />
-    <meta name="twitter:image" content="https://portalfatecon.com/src/assets/images/mascoteFatecon.png" /><!-- url fictícia, pode ser alterada em uma futura hospedagem do site -->
+    <meta name="twitter:image" content="https://portalfatecon.infinityfree.me/src/assets/images/mascoteFatecon.webp" /><!-- url fictícia, pode ser alterada em uma futura hospedagem do site -->
     
     <!-- Título da página -->
     <title><?php echo $paginaAtual ?> - Portal Fatecon</title>
@@ -74,7 +74,7 @@ if ($paginaAtual == 'Atracoes') {
     <!-- Fim dos ícones -->
 
     <!-- Manifesto para PWA (Progressive Web Apps) -->
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="/manifest.webmanifest">
 
     <!-- Css BootStrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">

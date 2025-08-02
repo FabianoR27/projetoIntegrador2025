@@ -2,7 +2,7 @@
     "name": "Portal Fatecon - Seu Destino para o mundo Geek",
     "short_name": "Portal Fatecon",
     "description": "Um portal feito para falar sobre o evento FateconHQs, além de trazer notícias sobre o mundo geek",
-    "start_url": "/",
+    "start_url": "https://portalfatecon.infinityfree.me/",
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#212529",
