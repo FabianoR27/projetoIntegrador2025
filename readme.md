@@ -1,44 +1,17 @@
-# Projeto Integrador
+# Projeto Integrador 2025 (revitalizado)
 
-**Nome do grupo**: DocesEAmaveisPredadoresDePelucia
 
-**Nomes dos integrantes do grupo**:
+Olá. Este é um projeto acadêmico, Aqui foi feito um portal de entretenimento geek baseado em um evento anual que acontece na cidade na cidade de São Roque - SP: a "FATECon HQs". A proposta era fazer um site dinamico em php, com dados vindo de um banco de dados MySQL, além de ser acessível para leitores de tela. Neste projeto Integrador, que é a continuação do projeto do ano passado, foram acrescentados algumas funcionalidades. São elas:
 
-- Cristiano
-- João Pedro
-- Rafael
-- Ana Lívia
-- Bárbara
-- Fabiano
+- Site dinâmico em php;
+- funcionalidades com javaScript, como formulários, modo escuro com localStorage e ajax para integrar um trecho de conteúdo dentro de uma pagina especifica;
+- Banco de dados MySQL, sendo trazidos para a página com comandos em php;
+- Acessibilidade para tornar a navegação possivel com leitores de tela.
 
-**Email do representante**: fabianor27@gmail.com
+O projeto foi composto por seis pessoas. Assim que foi entregue, eu decidi que poderia melhorá-lo, colocando meu jeito de codar e imaginar o design. Entao eu fiz isso:
+Implementei um modo escuro, retrabalhei os layouts, cores e imagens para tornar a experiencia do usuário mais enriquecedora, refatorei todos os códigos tornando-os mais limpos e fáceis de serem manipulados.
 
-**GitHub ID**:
 
-- @CristianoAlvCobello
-- @JP-Reveroni
-- @RafaVieira92
-- @moraes2302
-- @babrittoli
-- @FabianoR27
 
-**R.A.**:
-
-- 2650832413008
-- 2650832413005
-- 2650832413019
-- 2650832413030
-- 2650832413022
-- 2650832413012
-
-**Descrição do trabalho**:
-
-# Banco de dados do Portal Fatecon
-
-## Algumas coisas a serem pontuadas:
-- Nome do servidor: localhost 
-- nome do usuário: root 
-- senha: ' ' (não tem senha) 
-- nome do banco de dados: portalfatecon 
 
 
