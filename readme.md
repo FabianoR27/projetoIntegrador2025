@@ -1,17 +1,49 @@
-# Projeto Integrador 2025 (revitalizado)
+# Projeto Integrador 2025 (Versão Revitalizada)
 
+Olá! Este é um projeto acadêmico desenvolvido com base na *FATECon HQs*, um evento geek anual realizado em São Roque - SP. A proposta era criar um portal dinâmico e acessível, utilizando **PHP e MySQL**, para oferecer uma experiência moderna e inclusiva aos visitantes.
 
-Olá. Este é um projeto acadêmico, Aqui foi feito um portal de entretenimento geek baseado em um evento anual que acontece na cidade na cidade de São Roque - SP: a "FATECon HQs". A proposta era fazer um site dinamico em php, com dados vindo de um banco de dados MySQL, além de ser acessível para leitores de tela. Neste projeto Integrador, que é a continuação do projeto do ano passado, foram acrescentados algumas funcionalidades. São elas:
+O projeto é uma continuação da versão desenvolvida em 2024 e recebeu diversas melhorias importantes nesta nova etapa, incluindo:
 
-- Site dinâmico em php;
-- funcionalidades com javaScript, como formulários, modo escuro com localStorage e ajax para integrar um trecho de conteúdo dentro de uma pagina especifica;
-- Banco de dados MySQL, sendo trazidos para a página com comandos em php;
-- Acessibilidade para tornar a navegação possivel com leitores de tela.
+* 💻 Desenvolvimento dinâmico em **PHP**, com integração de dados via **MySQL**
+* 📱 **Responsividade** para todos os tamanhos de tela
+* 🌙 **Modo escuro** persistente, utilizando `localStorage`
+* 📁 Formulários interativos e inserção de conteúdo via **AJAX**
+* ♿ **Acessibilidade aprimorada**, com suporte a leitores de tela
 
-O projeto foi composto por seis pessoas. Assim que foi entregue, eu decidi que poderia melhorá-lo, colocando meu jeito de codar e imaginar o design. Entao eu fiz isso:
-Implementei um modo escuro, retrabalhei os layouts, cores e imagens para tornar a experiencia do usuário mais enriquecedora, refatorei todos os códigos tornando-os mais limpos e fáceis de serem manipulados.
+---
 
+## Minha contribuição pessoal
 
+O projeto foi construído em equipe (6 integrantes no total), e sou muito grato por cada um que fez parte dessa jornada. Após a entrega oficial, decidi refinar o portal com base na minha visão de design e desenvolvimento, aplicando meus aprendizados e estilo pessoal de codificação.
 
+Essas foram as principais melhorias que implementei:
 
+* Redesign completo dos layouts, com nova paleta de cores e imagens otimizadas
+* Refatoração do código para torná-lo mais limpo, legível e escalável
+* Implementação de um modo escuro funcional e persistente
+* Ajustes de acessibilidade para tornar a navegação mais inclusiva
 
+---
+
+## Aprendizados
+
+Ao longo desse processo, pude aprofundar meus conhecimentos em:
+
+* ✅ **PHP** e integração com banco de dados
+* ✅ **JavaScript**, incluindo manipulação de DOM, AJAX e armazenamento local
+* ✅ **Design de interfaces**, com foco em experiência do usuário (UX/UI)
+* ✅ **Boas práticas de codificação e acessibilidade web**
+
+Esse projeto representa a consolidação de muitos aprendizados que venho acumulando em minha jornada como aspirante a desenvolvedor Front-End. Sei que ainda há muito a evoluir, mas sigo determinado a aprender mais e buscar meu espaço no mercado de tecnologia.
+
+---
+
+## Acesse o projeto
+
+Se você quiser conferir o resultado, o projeto está disponível em:
+
+🔗 **[https://portalfatecon.infinityfree.me/](https://portalfatecon.infinityfree.me/)**
+
+Ficarei muito feliz com feedbacks, sugestões ou críticas construtivas. Cada comentário é uma oportunidade de crescer ainda mais.
+
+Obrigado por acompanhar meu trabalho! 🚀
