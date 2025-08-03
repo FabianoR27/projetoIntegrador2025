@@ -1,3 +1,9 @@
+-- Criação do banco de dados portalfatecon
+CREATE DATABASE IF NOT EXISTS portalfatecon
+    DEFAULT CHARACTER set utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE portalfatecon;
+
 -- Criando a tabela com lista de Animes
 CREATE TABLE IF NOT EXISTS listaAnimes (
     id INT PRIMARY KEY AUTO_INCREMENT,

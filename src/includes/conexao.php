@@ -1,8 +1,5 @@
 <?php
-// Variáveis de conexão separadas em um arquivo à parte para facilitar o manuseio
-// além de ser mais seguro e te poupar de escrever de novo a mesma coisa
-// use include para puxar essa conexão para as demais páginas. insira na primeira linha depois do header
-
+// Arquivo de conexão com o banco de dados
 // Conectar ao banco de dados usando as variáveis de configuração $nome_servidor, $nome_usuario, $senha, $nome_banco.
 $nome_servidor = "localhost"; // Nome do servidor
 $nome_usuario = "root"; // Nome de usuário do banco de dados
